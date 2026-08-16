@@ -36,3 +36,13 @@ To handle the massive state space, I iteratively developed 10 agents, grouped in
 
 ## Results & Reflections
 The final agent (**Agent D3**) successfully navigates the extreme branching factor of Ultimate Tic-Tac-Toe using pure adversarial search techniques. While the highest-tier benchmark testing required machine learning heuristics to pass, this pure-search approach successfully defeats a wide array of sophisticated agents by maximizing tree depth through rigorous algorithmic optimization.
+
+## Installation & Execution
+
+The repository includes a command-line interface (CLI) to simulate matches between human players and any of the evolutionary AI agents.
+
+### Prerequisites
+* **Python 3.8+**
+* **NumPy:** Required for multidimensional state management.
+  ```bash
+  pip install numpy
