@@ -37,12 +37,64 @@ To handle the massive state space, I iteratively developed 10 agents, grouped in
 ## Results & Reflections
 The final agent (**Agent D3**) successfully navigates the extreme branching factor of Ultimate Tic-Tac-Toe using pure adversarial search techniques. While the highest-tier benchmark testing required machine learning heuristics to pass, this pure-search approach successfully defeats a wide array of sophisticated agents by maximizing tree depth through rigorous algorithmic optimization.
 
-## Installation & Execution
+## ⚠️ Note on Code Authorship & AI Usage
 
-The repository includes a command-line interface (CLI) to simulate matches between human players and any of the evolutionary AI agents.
+Transparency is important to me. Please note the following regarding the architecture of this repository:
+
+*   **Core Algorithms (`My Agents/`):** The 10 distinct AI agents (Agent A through Agent D3), their underlying heuristic math, alpha-beta pruning logic, and transposition tables are **100% my original work**. This project was developed as university coursework in 2025, where it earned a final score of **9.5 / 10**.
+*   **Repository Timeline:** You may notice that the commit history for this repository is very recent. During my studies, university policy strictly prohibited making coursework public. I have only recently uploaded this code to GitHub to share it with prospective employers.
+*   **Visual Engine & Mechanics (`game_engine/`):** To make my core algorithms easy to evaluate, I recently used AI assistance to generate the CLI visualizer, ANSI color rendering, and game loop mechanics found in `main.py` and `utils.py`. These files were created specifically to wrap my raw algorithmic logic into a clean, interactive testing environment so technical interviewers and recruiters can easily visualize and play against the agents.
+
+
+## Gameplay Showcase
+
+<p align="center">
+  <b>Interactive Agent Selection</b><br>
+  <i>Menu allowing users to select human play or deploy one of the 10 custom AI agents.</i><br>
+  <img src="docs/ss1.png" alt="Agent Selection Menu" width="45%">
+</p>
+
+<br>
+
+<p align="center">
+  <b>Input Validation & Game Rules</b><br>
+  <i>Human vs. AI gameplay demonstrating strict input validation and "send rule" enforcement.</i><br>
+  <img src="docs/ss2.png" alt="Rule Enforcement and Input Error" width="45%">
+</p>
+
+<br>
+
+<p align="center">
+  <b>Algorithmic Battles</b><br>
+  <i>Mid-game tactical evaluation as two algorithmic agents battle for meta-board control.</i><br>
+  <img src="docs/ss3.png" alt="Mid-game AI vs AI" width="35%">
+</p>
+
+<br>
+
+<p align="center">
+  <b>Dynamic Visual Rendering</b><br>
+  <i>ANSI color rendering displaying local board captures during an intense matchup.</i><br>
+  <img src="docs/ss4.png" alt="Board Captures Rendering" width="35%">
+</p>
+
+<br>
+
+<p align="center">
+  <b>Terminal Victory State</b><br>
+  <i>Final state showing a decisive victory for Player 1.</i><br>
+  <img src="docs/ss5.png" alt="Victory Screen" width="35%">
+</p>
 
 ### Prerequisites
 * **Python 3.8+**
 * **NumPy:** Required for multidimensional state management.
   ```bash
   pip install numpy
+### How to Run the Game
+
+Navigate to the game engine directory and execute the main Python file to start the interactive CLI:
+
+```bash
+cd game_engine
+python main.py
